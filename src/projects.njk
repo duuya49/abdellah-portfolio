@@ -41,7 +41,7 @@ description: Hands-on projects, simulations, and real-world security execution.
             <p>{{ project.data.description }}</p>
 
             <div class="hero-cta" style="margin-top: var(--spacing-md);">
-                <a href="{{ project.url }}" class="btn btn-secondary">Read Full Deep-Dive</a>
+                <a href="{{ project.url | url }}" class="btn btn-secondary">Read Full Deep-Dive</a>
             </div>
         </div>
         {% endfor %}

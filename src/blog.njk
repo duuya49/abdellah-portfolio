@@ -25,7 +25,7 @@ description: Thought leadership, deep technical walkthroughs, and security resea
             <p>{{ post.data.description }}</p>
             
             <div class="hero-cta" style="margin-top: var(--spacing-md);">
-                <a href="{{ post.url }}" class="btn btn-secondary">Read Full Writeup</a>
+                <a href="{{ post.url | url }}" class="btn btn-secondary">Read Full Writeup</a>
             </div>
         </article>
         {% endfor %}
