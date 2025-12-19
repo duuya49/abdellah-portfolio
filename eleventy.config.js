@@ -1,7 +1,7 @@
 module.exports = function (eleventyConfig) {
     // Pass-through copy for assets
     eleventyConfig.addPassthroughCopy("src/assets");
-    eleventyConfig.addPassthroughCopy("admin");
+    eleventyConfig.addPassthroughCopy("src/admin");
 
     // Filter to format dates (useful for blog posts)
     eleventyConfig.addFilter("postDate", (dateObj) => {

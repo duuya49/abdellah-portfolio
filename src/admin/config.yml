@@ -1,0 +1,39 @@
+backend:
+  name: github
+  repo: duuya49/abdellah-portfolio
+  branch: main
+  auth_type: implicit
+  app_id: YOUR_GITHUB_APP_ID # Update this with your GitHub OAuth App Client ID
+
+media_folder: "src/assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "src/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Category", name: "category", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "projects"
+    label: "Projects"
+    folder: "src/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Category", name: "category", widget: "string"}
+      - {label: "Environment", name: "environment", widget: "string", required: false}
+      - {label: "Tools", name: "tools", widget: "string", required: false}
+      - {label: "Framework", name: "framework", widget: "string", required: false}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/project.njk"}
+      - {label: "Tags", name: "tags", widget: "hidden", default: "projects"}
+      - {label: "Body", name: "body", widget: "markdown"}
