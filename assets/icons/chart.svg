@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <defs>
+        <linearGradient id="chartGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#a18cd1;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#fbc2eb;stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="chartGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#84fab0;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#8fd3f4;stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="chartGrad3" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#fccb90;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#d57eeb;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    <rect x="60" y="250" width="100" height="200" rx="10" fill="url(#chartGrad1)"/>
+    <rect x="206" y="150" width="100" height="300" rx="10" fill="url(#chartGrad2)"/>
+    <rect x="352" y="50" width="100" height="400" rx="10" fill="url(#chartGrad3)"/>
+    <line x1="40" y1="470" x2="472" y2="470" stroke="#ccc" stroke-width="10" stroke-linecap="round"/>
+</svg>

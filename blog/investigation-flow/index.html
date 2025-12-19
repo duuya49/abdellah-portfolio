@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A structured breakdown of the incident response lifecycle, from initial triage to host network isolation.">
+    <meta name="keywords" content="SOC Analyst, Threat Hunting, Incident Response, SIEM, Cybersecurity, DFIR, Malware Analysis">
+    <meta name="author" content="Abdellah El Aasry">
+    <title>From Alert to Containment: Incident Investigation Flow | Abdellah El Aasry</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="From Alert to Containment: Incident Investigation Flow | Abdellah El Aasry">
+    <meta property="og:description" content="A structured breakdown of the incident response lifecycle, from initial triage to host network isolation.">
+    <meta property="og:image" content="/assets/images/preview.png">
+    <meta property="og:url" content="https://abdellahelaasry.com">
+    <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+    <!-- Navigation -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+    </div>
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo">AEA</a>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/#about" class="nav-link">About</a></li>
+                <li><a href="/#experience" class="nav-link">Experience</a></li>
+                <li><a href="/#skills" class="nav-link">Skills</a></li>
+                <li><a href="/projects" class="nav-link">Projects</a></li>
+                <li><a href="/blog" class="nav-link">Blog</a></li>
+                <li><a href="/#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="/#contact" class="nav-link nav-cta">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    
+<header class="page-header">
+    <div class="container">
+        <h1 class="gradient-text">From Alert to Containment: Incident Investigation Flow</h1>
+        <p>A structured breakdown of the incident response lifecycle, from initial triage to host network isolation.</p>
+    </div>
+</header>
+
+<article class="blog-details">
+    <div class="container">
+        <div class="technical-card">
+            <div class="meta-info">Incident Investigation • October 15, 2024</div>
+            <h3 class="tech-section-title">Investigation Steps</h3>
+<p>A structured approach to an EDR alert indicating suspicious PowerShell execution on a marketing workstation.</p>
+<ul class="step-list">
+    <li><strong>Initial Triage:</strong> Analyzed the parent/child process tree to understand the execution context.</li>
+    <li><strong>Evidence Correlation:</strong> Pivoted to SIEM logs to check for lateral movement or data staging.</li>
+    <li><strong>Scope Analysis:</strong> Scanned the environment for the same SHA256 hash across all endpoints.</li>
+    <li><strong>Containment:</strong> Isolated the host using EDR "Network Quarantine" and reset compromised user credentials.</li>
+    <li><strong>Response:</strong> Updated SPAM filters and performed a global search/purge of the specific email hash.</li>
+</ul>
+<div class="callout callout-lessons">
+    <div class="callout-title">💡 Lessons Learned</div>
+    <p>Rapid containment is only possible when EDR policies are correctly pre-configured and the communication channel with IT managers is well-established.</p>
+</div>
+
+        </div>
+        
+        <div class="hero-cta" style="margin-top: var(--spacing-lg);">
+            <a href="/blog" class="btn btn-secondary">← Back to Blog</a>
+        </div>
+    </div>
+</article>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Abdellah El Aasry. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to Top">↑</button>
+
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>

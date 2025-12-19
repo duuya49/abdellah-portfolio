@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <defs>
+        <linearGradient id="hatGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#485563;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#29323c;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    <path d="M256 64 L448 160 L256 256 L64 160 Z" fill="url(#hatGrad)"/>
+    <path d="M448 160 V320" stroke="#29323c" stroke-width="10"/>
+    <path d="M128 200 V360 C128 400 384 400 384 360 V200" fill="url(#hatGrad)"/>
+    <circle cx="448" cy="340" r="20" fill="#f6d365"/>
+    <line x1="448" y1="160" x2="448" y2="320" stroke="#f6d365" stroke-width="5"/>
+</svg>
