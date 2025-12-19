@@ -1,0 +1,51 @@
+---
+layout: layouts/base.njk
+---
+
+<header class="page-header">
+    <div class="container">
+        <h1 class="gradient-text">{{ title }}</h1>
+        <p>{{ description }}</p>
+    </div>
+</header>
+
+<main class="project-details">
+    <div class="container">
+        <div class="technical-card">
+            <div class="overview-grid">
+                <div class="overview-item">
+                    <span class="overview-label">Project Title</span>
+                    <span class="overview-value">{{ title }}</span>
+                </div>
+                <div class="overview-item">
+                    <span class="overview-label">Category</span>
+                    <span class="overview-value">{{ category }}</span>
+                </div>
+                {% if environment %}
+                <div class="overview-item">
+                    <span class="overview-label">Environment</span>
+                    <span class="overview-value">{{ environment }}</span>
+                </div>
+                {% endif %}
+                {% if tools %}
+                <div class="overview-item">
+                    <span class="overview-label">Tools Used</span>
+                    <span class="overview-value">{{ tools }}</span>
+                </div>
+                {% endif %}
+                {% if framework %}
+                <div class="overview-item">
+                    <span class="overview-label">Framework</span>
+                    <span class="overview-value">{{ framework }}</span>
+                </div>
+                {% endif %}
+            </div>
+
+            {{ content | safe }}
+
+            <div class="hero-cta" style="margin-top: var(--spacing-lg);">
+                <a href="/projects" class="btn btn-secondary">← Back to Projects</a>
+            </div>
+        </div>
+    </div>
+</main>

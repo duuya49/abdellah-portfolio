@@ -1,0 +1,49 @@
+---
+layout: layouts/base.njk
+title: Detailed Technical Work
+description: Hands-on projects, simulations, and real-world security execution.
+---
+
+<header class="page-header">
+    <div class="container">
+        <h1 class="gradient-text">{{ title }}</h1>
+        <p>{{ description }}</p>
+    </div>
+</header>
+
+<main class="project-details">
+    <div class="container">
+        {% for project in collections.projects | reverse %}
+        <div class="technical-card">
+            <div class="overview-grid">
+                <div class="overview-item">
+                    <span class="overview-label">Project Title</span>
+                    <span class="overview-value">{{ project.data.title }}</span>
+                </div>
+                <div class="overview-item">
+                    <span class="overview-label">Category</span>
+                    <span class="overview-value">{{ project.data.category }}</span>
+                </div>
+                {% if project.data.environment %}
+                <div class="overview-item">
+                    <span class="overview-label">Environment</span>
+                    <span class="overview-value">{{ project.data.environment }}</span>
+                </div>
+                {% endif %}
+                {% if project.data.tools %}
+                <div class="overview-item">
+                    <span class="overview-label">Tools Used</span>
+                    <span class="overview-value">{{ project.data.tools }}</span>
+                </div>
+                {% endif %}
+            </div>
+
+            <p>{{ project.data.description }}</p>
+
+            <div class="hero-cta" style="margin-top: var(--spacing-md);">
+                <a href="{{ project.url }}" class="btn btn-secondary">Read Full Deep-Dive</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</main>

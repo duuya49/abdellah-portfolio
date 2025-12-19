@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="How to reduce alert fatigue by transitioning from string-matching to behavior-based detection thresholds.">
+    <meta name="keywords" content="SOC Analyst, Threat Hunting, Incident Response, SIEM, Cybersecurity, DFIR, Malware Analysis">
+    <meta name="author" content="Abdellah El Aasry">
+    <title>Building High-Fidelity SIEM Alerts | Abdellah El Aasry</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Building High-Fidelity SIEM Alerts | Abdellah El Aasry">
+    <meta property="og:description" content="How to reduce alert fatigue by transitioning from string-matching to behavior-based detection thresholds.">
+    <meta property="og:image" content="/assets/images/preview.png">
+    <meta property="og:url" content="https://abdellahelaasry.com">
+    <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+    <!-- Navigation -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+    </div>
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo">AEA</a>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/#about" class="nav-link">About</a></li>
+                <li><a href="/#experience" class="nav-link">Experience</a></li>
+                <li><a href="/#skills" class="nav-link">Skills</a></li>
+                <li><a href="/projects" class="nav-link">Projects</a></li>
+                <li><a href="/blog" class="nav-link">Blog</a></li>
+                <li><a href="/#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="/#contact" class="nav-link nav-cta">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    
+<header class="page-header">
+    <div class="container">
+        <h1 class="gradient-text">Building High-Fidelity SIEM Alerts</h1>
+        <p>How to reduce alert fatigue by transitioning from string-matching to behavior-based detection thresholds.</p>
+    </div>
+</header>
+
+<article class="blog-details">
+    <div class="container">
+        <div class="technical-card">
+            <div class="meta-info">Detection Engineering • November 20, 2024</div>
+            <h3 class="tech-section-title">Problem Statement</h3>
+<p>The SOC was experiencing severe "Alert Fatigue" due to a high volume of false positives from legacy detection rules that lacked behavioral context.</p>
+<h3 class="tech-section-title">Detection Logic Design</h3>
+<p>I transitioned from simple string-matching to behavior-based thresholds and multi-stage correlation logic.</p>
+<ul class="step-list">
+    <li>Implemented a "Pre-Alert Filter" that excludes known-good administrative automation scripts.</li>
+    <li>Developed correlation rules that trigger only when three or more related MITRE techniques are detected within a 5-minute window.</li>
+    <li>Automated the enrichment process (IP reputation, domain age) during the detection phase.</li>
+</ul>
+<div class="callout callout-impact">
+    <div class="callout-title">→ SOC Impact</div>
+    <p>Reduced the total alert volume by 40% while simultaneously increasing the true positive rate by 15%, allowing analysts more time for deep investigation.</p>
+</div>
+
+        </div>
+        
+        <div class="hero-cta" style="margin-top: var(--spacing-lg);">
+            <a href="/blog" class="btn btn-secondary">← Back to Blog</a>
+        </div>
+    </div>
+</article>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Abdellah El Aasry. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to Top">↑</button>
+
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>

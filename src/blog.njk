@@ -1,0 +1,33 @@
+---
+layout: layouts/base.njk
+title: Blog & Technical Writeups
+description: Thought leadership, deep technical walkthroughs, and security research.
+---
+
+<header class="page-header">
+    <div class="container">
+        <h1 class="gradient-text">{{ title }}</h1>
+        <p>{{ description }}</p>
+    </div>
+</header>
+
+<main class="blog-details">
+    <div class="container">
+        <div class="blog-intro">
+            <h2 class="tech-section-title" style="justify-content: center;">My Security Philosophy</h2>
+            <p>I believe security is a continuous process of proactive hunting, rigorous detection engineering, and structured investigation. In these writeups, I share my technical approach to solving complex SOC challenges and dissecting modern threats.</p>
+        </div>
+
+        {% for post in collections.blog | reverse %}
+        <article class="technical-card blog-post-card">
+            <div class="meta-info">{{ post.data.category }} • {{ post.date | postDate }}</div>
+            <h2 class="tech-section-title">{{ post.data.title }}</h2>
+            <p>{{ post.data.description }}</p>
+            
+            <div class="hero-cta" style="margin-top: var(--spacing-md);">
+                <a href="{{ post.url }}" class="btn btn-secondary">Read Full Writeup</a>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</main>

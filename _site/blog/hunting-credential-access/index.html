@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A technical walkthrough on identifying brute-force and credential stuffing anomalies across hybrid environments.">
+    <meta name="keywords" content="SOC Analyst, Threat Hunting, Incident Response, SIEM, Cybersecurity, DFIR, Malware Analysis">
+    <meta name="author" content="Abdellah El Aasry">
+    <title>Hunting Credential Access Using SIEM Logs | Abdellah El Aasry</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Hunting Credential Access Using SIEM Logs | Abdellah El Aasry">
+    <meta property="og:description" content="A technical walkthrough on identifying brute-force and credential stuffing anomalies across hybrid environments.">
+    <meta property="og:image" content="/assets/images/preview.png">
+    <meta property="og:url" content="https://abdellahelaasry.com">
+    <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+    <!-- Navigation -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+    </div>
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo">AEA</a>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/#about" class="nav-link">About</a></li>
+                <li><a href="/#experience" class="nav-link">Experience</a></li>
+                <li><a href="/#skills" class="nav-link">Skills</a></li>
+                <li><a href="/projects" class="nav-link">Projects</a></li>
+                <li><a href="/blog" class="nav-link">Blog</a></li>
+                <li><a href="/#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="/#contact" class="nav-link nav-cta">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    
+<header class="page-header">
+    <div class="container">
+        <h1 class="gradient-text">Hunting Credential Access Using SIEM Logs</h1>
+        <p>A technical walkthrough on identifying brute-force and credential stuffing anomalies across hybrid environments.</p>
+    </div>
+</header>
+
+<article class="blog-details">
+    <div class="container">
+        <div class="technical-card">
+            <div class="meta-info">Threat Hunting • December 19, 2024</div>
+            <h3 class="tech-section-title">Background & Context</h3>
+<p>Credential access remains a primary goal for adversaries once they establish initial foothold. Detecting these attempts requires understanding of both legitimate authentication patterns and malicious anomalies.</p>
+<h3 class="tech-section-title">MITRE ATT&CK Techniques</h3>
+<p>This hunt focuses on <strong>T1110 (Brute Force)</strong> and <strong>T1078 (Valid Accounts)</strong> across hybrid environments.</p>
+<h3 class="tech-section-title">Hypothesis & Analysis</h3>
+<p>Hypothesis: Analysts can identify brute-force or credential stuffing by monitoring for rapid-successive failed logins followed by a single successful login from the same source but different accounts.</p>
+<ul class="step-list">
+    <li>Analyzed authentication logs for spikes in Event ID 4625 (Failed Logon).</li>
+    <li>Correlated source IP addresses with known geolocation anomalies and VPN exit nodes.</li>
+    <li>Executed SIEM queries to isolate outliers in "Failure Count vs Time Bucket".</li>
+    <li>Validated findings against user behavior baselines (UEBA).</li>
+</ul>
+<div class="callout callout-lessons">
+    <div class="callout-title">💡 Key Lessons Learned</div>
+    <p>Log diversity is critical. Without visibility into both domain controller and application-level logs, high-fidelity credential hunting is significantly hampered.</p>
+</div>
+
+        </div>
+        
+        <div class="hero-cta" style="margin-top: var(--spacing-lg);">
+            <a href="/blog" class="btn btn-secondary">← Back to Blog</a>
+        </div>
+    </div>
+</article>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Abdellah El Aasry. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to Top">↑</button>
+
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <defs>
+        <linearGradient id="virusGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#84fab0;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#8fd3f4;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    <path d="M256 56 V10 M256 456 V502 M456 256 H502 M10 256 H56 M396 116 L430 80 M116 396 L80 430 M396 396 L430 430 M116 116 L80 80" stroke="url(#virusGrad)" stroke-width="30" stroke-linecap="round"/>
+    <circle cx="256" cy="256" r="180" fill="none" stroke="url(#virusGrad)" stroke-width="20"/>
+</svg>
