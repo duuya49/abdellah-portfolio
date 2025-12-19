@@ -20,7 +20,7 @@ jobs:
           node-version: '20'
           cache: 'npm'
       - run: npm install
-      - run: npx @11ty/eleventy
+      - run: npm run build
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
