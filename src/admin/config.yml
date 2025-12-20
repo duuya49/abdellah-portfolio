@@ -3,7 +3,8 @@ backend:
   repo: duuya49/abdellah-portfolio
   branch: main
   auth_type: implicit
-  app_id: Ov23cthmuoqOVAI3TTAM # Update this with your GitHub OAuth App Client ID
+  client_id: Ov23cthmuoqOVAI3TTAM # Use client_id for OAuth App
+  app_id: Ov23cthmuoqOVAI3TTAM # Keep app_id for redundancy
 
 media_folder: "src/assets/uploads"
 public_folder: "/assets/uploads"
