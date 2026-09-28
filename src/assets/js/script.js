@@ -121,25 +121,6 @@ const debouncedUpdateNav = debounce(updateActiveNav, 10);
 window.removeEventListener('scroll', updateActiveNav);
 window.addEventListener('scroll', debouncedUpdateNav);
 
-// Add hover effect to timeline items
-const timelineItems = document.querySelectorAll('.timeline-item');
-timelineItems.forEach((item, index) => {
-    item.style.animationDelay = `${index * 0.1}s`;
-});
-
-// Parallax effect for hero background (subtle)
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const heroBackground = document.querySelector('.hero-background');
-
-    if (heroBackground && scrolled < window.innerHeight) {
-        heroBackground.style.transform = `translateY(${scrolled * 0.5}px)`;
-    }
-});
-
-// Log page load for analytics (placeholder)
-console.log('Portfolio loaded successfully');
-
 // Scroll Progress Bar & Back to Top Button
 const scrollProgressBar = document.getElementById('scrollProgressBar');
 const backToTopButton = document.getElementById('backToTop');
@@ -171,22 +152,5 @@ if (backToTopButton) {
             top: 0,
             behavior: 'smooth'
         });
-    });
-}
-
-// Interactive Hero Background (Parallax/Tilt)
-const heroSection = document.querySelector('.hero');
-const heroContent = document.querySelector('.hero-content');
-
-if (heroSection && heroContent && window.innerWidth > 768) {
-    heroSection.addEventListener('mousemove', (e) => {
-        const x = (window.innerWidth - e.pageX * 2) / 100;
-        const y = (window.innerHeight - e.pageY * 2) / 100;
-
-        heroContent.style.transform = `translateX(${x}px) translateY(${y}px)`;
-    });
-
-    heroSection.addEventListener('mouseleave', () => {
-        heroContent.style.transform = 'translate(0, 0)';
     });
 }
