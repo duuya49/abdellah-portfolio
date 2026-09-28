@@ -1,6 +1,7 @@
 ---
 title: Threat Hunting Using MITRE ATT&CK
 category: Threat Hunting
+description: Hypothesis-driven hunting across SIEM and EDR telemetry to uncover suspicious behavior missed by automated controls.
 environment: Corporate Enterprise
 tools: SIEM, EDR Telemetry
 framework: MITRE ATT&CK

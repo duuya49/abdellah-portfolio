@@ -1,6 +1,7 @@
 ---
 title: SIEM Detection Engineering & Alert Optimization
 category: Detection Engineering
+description: Designing and tuning behavior-based SIEM detections to improve alert fidelity, coverage, and analyst efficiency.
 environment: SOC Production
 tools: IBM QRadar, ELK Stack
 framework: MITRE ATT&CK

@@ -1,6 +1,7 @@
 ---
 title: SOC Automation & Reporting Optimization
 category: SOC Automation
+description: Automating repetitive reporting and case-management workflows to improve consistency and reduce analyst effort.
 environment: Global SOC Operation
 tools: Python, APIs, Case Management
 outcome: Reduced reporting time by 50%

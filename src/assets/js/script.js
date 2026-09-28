@@ -29,7 +29,7 @@ function updateActiveNav() {
         const sectionHeight = section.offsetHeight;
         const sectionTop = section.offsetTop - 100;
         const sectionId = section.getAttribute('id');
-        const navLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
+        const navLink = document.querySelector(`.nav-link[href$="#${sectionId}"]`);
 
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
             navLinkElements.forEach(link => link.classList.remove('active'));

@@ -31,6 +31,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Date", name: "date", widget: "datetime"}
       - {label: "Category", name: "category", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
       - {label: "Environment", name: "environment", widget: "string", required: false}
       - {label: "Tools", name: "tools", widget: "string", required: false}
       - {label: "Framework", name: "framework", widget: "string", required: false}

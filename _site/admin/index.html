@@ -6,11 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
     <title>Content Manager</title>
+    <link rel="cms-config-url" type="text/yaml" href="config.yml" />
 </head>
 
 <body>
     <!-- Include the library from a CDN -->
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script src="https://unpkg.com/decap-cms@3.3.3/dist/decap-cms.js"></script>
+    <script>
+        // Force loading of config.yml if it's not found automatically
+        if (!window.CMS_CONFIG) {
+            fetch('config.yml')
+                .then(response => response.text())
+                .then(yaml => {
+                    console.log("Found config.yml, initializing CMS manualy...");
+                })
+                .catch(err => console.error("Error fetching config.yml:", err));
+        }
+    </script>
 </body>
 
 </html>

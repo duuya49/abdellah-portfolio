@@ -1,6 +1,7 @@
 ---
 title: SIEM Gap Analysis & Log Visibility Audit
 category: SOC Strategy
+description: Auditing enterprise log coverage to identify telemetry blind spots and restore reliable detection visibility.
 environment: Hybrid Cloud SOC
 tools: SIEM Ingestion Metrics
 outcome: Closed major visibility gaps
